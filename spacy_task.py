@@ -21,7 +21,6 @@ with open(input_text) as f:
     doc = nlp(f.read())
     result_list = []
     for token in doc:
-        print(token.text)
         if token.is_digit or token.pos_ == "PROPN":
             result_list.append(token.text)
 
