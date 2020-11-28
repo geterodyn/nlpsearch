@@ -1,16 +1,11 @@
 import re
+import sys
 import spacy
 from spacy.tokenizer import Tokenizer
-import argparse
 from collections import defaultdict
 
-parser = argparse.ArgumentParser(description="parsing txt to html")
-parser.add_argument('-input', action='store', dest='input_text')
-parser.add_argument('-output', action='store', dest='output_html')
-
-args = parser.parse_args()
-input_text = args.input_text
-output_html = args.output_html
+input_text = sys.argv[1] 
+output_html = sys.argv[2] 
 
 
 def custom_tokenizer(nlp):
